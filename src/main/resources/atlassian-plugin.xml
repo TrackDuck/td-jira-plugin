@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/td16.png</param>
+        <param name="plugin-logo">images/td72.jpg</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="atlassian-plugin"/>
+
+    <!-- publish our component -->
+    <component key="trackDuckApplicationLinkInstaller"
+               class="com.trackduck.application.link.TrackDuckApplicationLinkInstallerImpl">
+        <interface>com.trackduck.application.link.TrackDuckApplicationLinkInstaller</interface>
+    </component>
+
+    <component-import key="applicationLinkService"
+                      interface="com.atlassian.applinks.spi.link.MutatingApplicationLinkService"/>
+
+    <component-import key="typeAccessor" interface="com.atlassian.applinks.spi.util.TypeAccessor"/>
+
+    <component-import key="serviceProviderConsumerStore"
+                      interface="com.atlassian.oauth.serviceprovider.ServiceProviderConsumerStore"/>
+
+   <!-- <web-resource key="my-resources" name="My Plugin Downloadable Resources">
+        <resource type="download" name="images/" location="/images"/>
+        <resource type="download" name="trackDuckButton.css" location="/styles/trackDuckButton.css"/>
+        <context>atl.general</context>
+    </web-resource>
+
+    <web-item key="trackDuckButton" section="system.top.navigation.bar" weight="10000">
+        <label key="track.duck.button.name"/>
+        <link linkId="trackduck_button_id=">http://trackduck.com</link>
+        <icon width="72" height="72">
+            <link linkId="test_link" >/download/resources/com.trackduck.trackduck-application-link-installer:my-resources/images/pluginLogo.png</link>
+        </icon>
+    </web-item>-->
+
+</atlassian-plugin>
