@@ -1,3 +1,4 @@
 #trackduck_button_id {
-    background-image: url(/images/pluginLogo.png);
+    background: url("images/td-jira-btn-sm.png") no-repeat 10px 5px;
+    width: 30px;
 }

@@ -1,4 +1,4 @@
-package com.trackduck.application.link;
+package com.trackduck.jira.applinks;
 
 import com.atlassian.applinks.api.ApplicationLink;
 import com.atlassian.applinks.api.ApplicationType;
@@ -23,7 +23,7 @@ import static com.atlassian.applinks.core.auth.oauth.servlets.serviceprovider.Ab
 
 public class TrackDuckApplicationLinkInstallerImpl implements TrackDuckApplicationLinkInstaller {
 
-    private static final String PROPERTIES_FILE = "/atlassian-plugin.properties";
+    private static final String PROPERTIES_FILE = "/18n_trackDuck.properties";
 
     private static final String TD_APPLICATION_LINK_URL = "track.duck.application.link.url";
     private static final String TD_APPLICATION_LINK_NAME = "track.duck.application.link.name";
