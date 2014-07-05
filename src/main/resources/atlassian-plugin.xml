@@ -38,7 +38,7 @@
         <label key="trackduck.button.name"/>
         <link linkId="trackduck_button_id">http://trackduck.com</link>
         <tooltip key="trackduck.button.tooltip"/>
-        <!--<condition class="com.atlassian.jira.plugin.webfragment.conditions.UserLoggedInCondition"/>-->
+        <condition class="com.atlassian.jira.plugin.webfragment.conditions.UserLoggedInCondition"/>
     </web-item>
 
     <web-resource key="downloadableResources" name="TrackDuck Downloadable Resources">
