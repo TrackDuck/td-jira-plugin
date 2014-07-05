@@ -50,6 +50,18 @@
             <version>${oauth.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.atlassian.plugins</groupId>
+            <artifactId>atlassian-plugins-osgi-bridge</artifactId>
+            <version>${osgi.bridge}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.context}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -77,6 +89,8 @@
         <amps.version>5.0.0</amps.version>
         <applinks.version>3.6</applinks.version>
         <oauth.version>1.8.0</oauth.version>
+        <osgi.bridge>2.10.1</osgi.bridge>
+        <spring.context>2.5.6.SEC03</spring.context>
     </properties>
 
     <repositories>
