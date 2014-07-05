@@ -5,18 +5,23 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}"/>
-        <param name="plugin-icon">images/td16.png</param>
-        <param name="plugin-logo">images/td72.jpg</param>
+        <param name="plugin-icon">images/td-16.png</param>
+        <param name="plugin-logo">images/td-72.png</param>
     </plugin-info>
 
-    <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="atlassian-plugin"/>
+    <!-- i18n resource -->
+    <resource type="i18n" name="i18n" location="i18n-trackduck"/>
 
-    <!-- publish our component -->
+    <!-- TrackDuck Application Link -->
     <component key="trackDuckApplicationLinkInstaller"
-               class="com.trackduck.application.link.TrackDuckApplicationLinkInstallerImpl">
-        <interface>com.trackduck.application.link.TrackDuckApplicationLinkInstaller</interface>
+               class="com.trackduck.jira.applinks.TrackDuckApplicationLinkInstallerImpl">
+        <interface>com.trackduck.jira.applinks.TrackDuckApplicationLinkInstaller</interface>
     </component>
+
+    <component-import key="eventPublisher" interface="com.atlassian.event.api.EventPublisher"/>
+
+    <component-import key="pluginRetrievalService"
+                      interface="com.atlassian.plugin.osgi.bridge.external.PluginRetrievalService"/>
 
     <component-import key="applicationLinkService"
                       interface="com.atlassian.applinks.spi.link.MutatingApplicationLinkService"/>
@@ -26,18 +31,22 @@
     <component-import key="serviceProviderConsumerStore"
                       interface="com.atlassian.oauth.serviceprovider.ServiceProviderConsumerStore"/>
 
-   <!-- <web-resource key="my-resources" name="My Plugin Downloadable Resources">
+    <component-import key="i18nResolver" interface="com.atlassian.sal.api.message.I18nResolver"/>
+
+    <!-- TrackDuck Button -->
+    <web-item key="trackDuckButton" name="TrackDuck Button" section="system.top.navigation.bar" weight="100">
+        <label key="trackduck.button.name"/>
+        <link linkId="trackduck_button_id">http://trackduck.com</link>
+        <tooltip key="trackduck.button.tooltip"/>
+        <condition class="com.atlassian.jira.plugin.webfragment.conditions.UserLoggedInCondition"/>
+    </web-item>
+
+    <web-resource key="downloadableResources" name="TrackDuck Downloadable Resources">
         <resource type="download" name="images/" location="/images"/>
         <resource type="download" name="trackDuckButton.css" location="/styles/trackDuckButton.css"/>
+        <resource type="download" name="trackDuckButton.js" location="/scripts/trackDuckButton.js"/>
         <context>atl.general</context>
+        <context>atl.admin</context>
     </web-resource>
-
-    <web-item key="trackDuckButton" section="system.top.navigation.bar" weight="10000">
-        <label key="track.duck.button.name"/>
-        <link linkId="trackduck_button_id=">http://trackduck.com</link>
-        <icon width="72" height="72">
-            <link linkId="test_link" >/download/resources/com.trackduck.trackduck-application-link-installer:my-resources/images/pluginLogo.png</link>
-        </icon>
-    </web-item>-->
 
 </atlassian-plugin>

@@ -1,4 +1,4 @@
-package com.trackduck.application.link;
+package com.trackduck.jira.applinks;
 
 public interface TrackDuckApplicationLinkInstaller {
 }
