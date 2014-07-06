@@ -6,7 +6,7 @@
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}"/>
         <param name="plugin-icon">images/td-16.png</param>
-        <param name="plugin-logo">images/td-72.png</param>
+        <param name="plugin-logo">images/td-72.jpg</param>
     </plugin-info>
 
     <!-- i18n resource -->
