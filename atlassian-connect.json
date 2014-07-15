@@ -1,0 +1,41 @@
+{
+    "key": "com.trackduck.jira-plugin",
+    "name": "TrackDuck",
+    "version": "1.0",
+    "description": "JIRA plugin for integration with TrackDuck",
+    "vendor": {
+        "name": "TrackDuck",
+        "url": "http://trackduck.com"
+    },
+    "baseUrl": "https://tdcdn.blob.core.windows.net/jira/jira-plugin-for-test4-1.0.jar",
+    "authentication": {
+        "type": "none"
+    },
+    "modules": {
+        "webItems": [
+            {
+                "url": "http://trackduck.com",
+                "location": "system.top.navigation.bar",
+                "context": "addon",
+                "weight": 100,
+                "key": "trackDuckButton",
+                "condition": {
+                    "condition": "user_is_logged_in"
+                },
+                "name": {
+                    "value": "&nbsp;",
+                    "i18n": "trackduck.button.name"
+                },
+                "tooltip": {
+                    "value": "Setup TrackDuck integration",
+                    "i18n": "trackduck.button.tooltip"
+                }
+            }
+        ]
+    },
+    "scopes": [
+        "write",
+        "read",
+        "admin"
+    ]
+}
