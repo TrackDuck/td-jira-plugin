@@ -23,19 +23,12 @@
                     "condition": "user_is_logged_in"
                 },
                 "name": {
-                    "value": "&nbsp;",
-                    "i18n": "trackduck.button.name"
+                    "value": "TrackDuck"
                 },
                 "tooltip": {
-                    "value": "Setup TrackDuck integration",
-                    "i18n": "trackduck.button.tooltip"
+                    "value": "Setup TrackDuck integration"
                 }
             }
         ]
-    },
-    "scopes": [
-        "write",
-        "read",
-        "admin"
-    ]
+    }
 }
