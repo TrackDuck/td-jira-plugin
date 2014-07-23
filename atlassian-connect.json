@@ -14,7 +14,7 @@
     "modules": {
         "webItems": [
             {
-                "url": "http://trackduck.com",
+                "url": "https://app.trackduck.com/auth/boarding/jira",
                 "location": "system.top.navigation.bar",
                 "context": "addon",
                 "weight": 100,

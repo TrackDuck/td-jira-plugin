@@ -36,7 +36,7 @@
     <!-- TrackDuck Button -->
     <web-item key="trackDuckButton" name="TrackDuck Button" section="system.top.navigation.bar" weight="100">
         <label key="trackduck.button.name"/>
-        <link linkId="trackduck_button_id">http://trackduck.com</link>
+        <link linkId="trackduck_button_id">https://app.trackduck.com/auth/boarding/jira</link>
         <tooltip key="trackduck.button.tooltip"/>
         <condition class="com.atlassian.jira.plugin.webfragment.conditions.UserLoggedInCondition"/>
     </web-item>
