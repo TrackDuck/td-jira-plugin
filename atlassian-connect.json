@@ -2,12 +2,12 @@
     "key": "com.trackduck.jira-plugin",
     "name": "TrackDuck",
     "version": "1.0",
-    "description": "JIRA plugin for integration with TrackDuck",
+    "description": "JIRA add-on for integration with TrackDuck",
     "vendor": {
         "name": "TrackDuck",
-        "url": "http://trackduck.com"
+        "url": "https://trackduck.com"
     },
-    "baseUrl": "https://tdcdn.blob.core.windows.net/jira/jira-plugin-for-test4-1.0.jar",
+    "baseUrl": "https://tdcdn.blob.core.windows.net/jira/jira-plugin-1.0.jar",
     "authentication": {
         "type": "none"
     },
