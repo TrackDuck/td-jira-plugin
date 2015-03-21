@@ -7,7 +7,7 @@
         "name": "TrackDuck",
         "url": "https://trackduck.com"
     },
-    "baseUrl": "https://tdcdn.blob.core.windows.net/jira/jira-plugin-1.0.jar",
+    "baseUrl": "https://trackduck.s3.amazonaws.com/jira/prod/jira-plugin-1.0.jar",
     "authentication": {
         "type": "none"
     },
