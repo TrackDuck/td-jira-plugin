@@ -1,7 +1,7 @@
 {
     "key": "com.trackduck.jira-plugin",
     "name": "TrackDuck",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "JIRA add-on for integration with TrackDuck",
     "vendor": {
         "name": "TrackDuck",
