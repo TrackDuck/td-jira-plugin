@@ -25,9 +25,10 @@ Jira plugin for TrackDuck integration
             See properties in %PLUGIN_DIR%/src/main/resources/i18n-trackduck.properties
 
 # BUILD
-
+    0. https://developer.atlassian.com/docs/developer-tools/working-with-the-sdk/command-reference/atlas-mvn
+    
     1. Navigate to the %PLUGIN_DIR%
 
-    2. Run 'mvn clean install'
+    2. Run 'atlas-mvn clean install'
 
     3. Result: %PLUGIN_DIR%/target/jira-plugin-<version>.jar
